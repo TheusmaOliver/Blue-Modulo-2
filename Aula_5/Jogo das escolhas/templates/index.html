@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Jogo das escolhas</title>
+</head>
+
+<body>
+    <div class="form_wrapper">
+        {%if not classe%}
+        <form action="" method="POST">
+            <div class="form_bloco">
+                <img src="../static/img/logo-blue-croped.gif" width="100" alt="Logo da blue">
+            </div>
+            <div class="form_bloco">
+                <label for="nome" class="form_label">Digite o seu nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Ex:Astolfo..." required>
+            </div>
+
+            <div class="form_bloco">
+                <label for="sobrenome" class="form_label">Digite o seu sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Ex:da Silva..." required>
+            </div>
+            <div class="form_bloco">
+                <label for="classe" class="form_label">Selecione sua classe:</label>
+                <div class="items">
+
+                    <input type="radio" name="classe" id="orc" value="orc" required>
+                    <label for="classe">Orc</label>
+                </div>
+                <div class="items">
+
+                    <input type="radio" name="classe" id="elfo" value="elfo" required>
+                    <label for="classe">Elfo</label>
+                </div>
+                <div class="items">
+
+                    <input type="radio" name="classe" id="hobbit" value="hobbit" required>
+                    <label for="classe">Hobbit</label>
+                </div>
+            </div>
+            <input type="submit" class="form_enviar" value="Jogar">
+        </form>
+        {%else%}
+
+        <div class="jogo_classe">
+            {{nome}},{{sobrenome}}, você é um <b>{{classe}}</b>
+        </div>
+
+        <img src="{{escolha_imagem}}" width="200" alt="Imagem do {{escolha_imagem}}">
+
+        <div class="jogo-bloco">
+            <a href="/" class="jogo-botao">Jogar Novamente</a>
+        </div>
+        {%endif%}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Form Html com Python + Flask</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <form method="POST" action="">
+            <div class="form_bloco">
+                <label for="usuario_nome" class="form_label">Digite o seu nome:</label>
+                <input type="text" name="usuario_nome" id="usuario_nome" placeholder="Ex:Astolfo..." required>
+            </div>
+
+            <div class="form_bloco">
+                <label for="usuario_sobrenome" class="form_label">Digite o seu sobrenome:</label>
+                <input type="text" name="usuario_sobrenome" id="usuario_sobrenome" placeholder="Ex:da Silva..."
+                    required>
+            </div>
+
+            <div class="form_bloco">
+                <label for="sexo" class="form_label">Selecione seu sexo:</label>
+                <div class="items">
+
+                    <input type="radio" name="sexo" id="masculino" value="masculino" required>
+                    <label for="sexo">Masculino</label>
+                </div>
+                <div class="items">
+
+                    <input type="radio" name="sexo" id="feminino" value="feminino" required>
+                    <label for="sexo">Feminino</label>
+                </div>
+            </div>
+
+            <div class="form_bloco">
+                <label for="skills" class="form_label">Selecione suas skills:</label>
+                <div class="items">
+                    <input type="checkbox" name="skills" id="skills" value="HTML">
+                    <label for="skills">HTML</label>
+
+                </div>
+                <div class="items">
+                    <input type="checkbox" name="skills" id="CSS" value="CSS">
+                    <label for="skills">CSS</label>
+
+                </div>
+                <div class="items">
+                    <input type="checkbox" name="skills" id="JavaScript" value="JavaScript">
+                    <label for="skills">JavaScript</label>
+
+                </div>
+            </div>
+
+            <div class="form_bloco">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
