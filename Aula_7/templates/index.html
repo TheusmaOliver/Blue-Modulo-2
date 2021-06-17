@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pokemons</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="bloco">
+        <img src="../static/img/logo-blue-croped.gif" width="200" alt="Logo gif">
+    </div>
+    <div class="bloco">
+        <h1 id="pokemon_selecionado">Nenhum Pokémon selecionado</h1>
+    </div>
+    <div class="lista_pokemons">
+        {% for pokemon in pokemons %}
+
+        <div class="card_pokemon" data-nome="{{pokemon.nome}}">
+            <div class="imagem_pokemon">
+                <img src="{{caminho_base_imagem}}/{{pokemon.numero}}.png" alt="">
+            </div>
+
+            <div class="nome_pokemon">
+                <b>{{pokemon.nome}}</b>
+            </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <script src="../static/index.js"></script>
+</body>
+
+</html>
